@@ -1,0 +1,79 @@
+<html>
+	<head>
+
+		<!-- Bootstrap -->
+   		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+   		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+   		<style>
+   			#rightPanel {
+   				background-color: rgb(200,200,200);
+   			}
+
+	   		.rightPanelHeader {
+	   			font-size: 2em;
+	   			padding-top: 4px;
+	   			padding-bottom: 4px;
+	   		}
+
+	   		.filterHeader {
+	   			font-size: 1.2em;
+	   			padding-left: 4px;	
+	   		}
+
+	   		#inspire_btn {
+	   			text-align: center;	
+	   		}
+
+	   		.filters {
+	   			padding-bottom: 20px;
+	   			padding-left: 8px;
+	   		}
+   		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div id="topPanel" class="row-fluid">
+				<img id="logo" src="" />
+
+				<h1>Find A Project</h1>
+			</div>
+
+		<div class="row-fluid" >
+			<div id="leftPanel" class="span2" style="background: green;">
+
+				<div class="filterHeader">Issues</div>
+				<div id="issueFilters" class="filters">
+					<div class="issue">Colocation</div>
+					<div class="issue">Blah</div>
+				</div>
+
+				<div class="filterHeader">Location</div>
+				<div id="locationFilters" class="filters">
+					<div class="location"><input type="checkbox">Manhattan</input>
+					</div>
+					<div class="location"><input type="checkbox">Brooklyn</input>
+					</div>
+				</div>
+
+				<div class="filterHeader" class="filters">Date</div>
+				<input type="text" id="datepicker" />
+			</div>
+			<div id="rightPanel" class="span10">
+				<div class="rightPanelHeader">Most Popular</div><hr/>
+
+				<div class="rightPanelHeader">Nearly Completed</div><hr/>
+
+				<div id="inspire_btn"><button class="btn">INSPIRE ME!</button></div>
+			</div>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+		    $("#datepicker").datepicker();
+
+  		</script>
+	</body>
+</html>
