@@ -6,8 +6,18 @@
    		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
    		<style>
+   			a {
+   				text-decoration: none;
+   				padding-bottom: 10px;
+   			}
+
+   			ul
+			{
+			    list-style-type: none;
+			}
+
    			#rightPanel {
-   				background-color: rgb(200,200,200);
+   				background-color: #d6d6d6;
    			}
 
 	   		.rightPanelHeader {
@@ -29,6 +39,25 @@
 	   			padding-bottom: 20px;
 	   			padding-left: 8px;
 	   		}
+
+	   		#rightPanelSection {
+	   			padding-bottom: 20px;
+	   		}
+
+	   		#campaignPanel {
+	   			width: 200px;
+	   			height: 200px;
+	   			float: left;
+	   		}
+
+	   		.campaignImg {
+	   			width: 50px;
+	   			height: 50px;
+	   		}
+
+	   		.issueLink:focus {
+	   			background-color: blue;
+	   		}
    		</style>
 	</head>
 	<body>
@@ -44,8 +73,8 @@
 
 				<div class="filterHeader">Issues</div>
 				<div id="issueFilters" class="filters">
-					<div class="issue">Colocation</div>
-					<div class="issue">Blah</div>
+					<div class="issue"><a href="#" class="issueLink">Colocation</a></div>
+					<div class="issue"><a href="#" class="issueLink">Colocation</a></div>
 				</div>
 
 				<div class="filterHeader">Location</div>
@@ -60,9 +89,41 @@
 				<input type="text" id="datepicker" />
 			</div>
 			<div id="rightPanel" class="span10">
-				<div class="rightPanelHeader">Most Popular</div><hr/>
+				<div class="rightPanelSection">
+					<div class="rightPanelHeader">Most Popular</div><hr/>
 
-				<div class="rightPanelHeader">Nearly Completed</div><hr/>
+					<ul id="mostPopularCampaigns" class="campaignList">
+						<li class="campaignPanel">
+							<div class="likes">283 Likes</div>
+							<img src="img/campaign/campaign0.jpg" class="campaignImg" />
+							<div class="campaignBlurb">Lorem ipsum blah blah blah blah</div>
+						</li>
+
+						<li class="campaignPanel">
+							<div class="likes">283 Likes</div>
+							<img src="" class="campaignImg" />
+							<div class="campaignBlurb">Lorem ipsum blah blah blah blah</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="rightPanelSection">
+					<div class="rightPanelHeader">Nearly Completed</div><hr/>
+
+					<ul id="mostPopularCampaigns" class="campaignList">
+						<li class="campaignPanel">
+							<div class="likes">283 Likes</div>
+							<img src="" class="campaignImg" />
+							<div class="campaignBlurb">Lorem ipsum blah blah blah blah</div>
+						</li>
+
+						<li class="campaignPanel">
+							<div class="likes">283 Likes</div>
+							<img src="" class="campaignImg" />
+							<div class="campaignBlurb">Lorem ipsum blah blah blah blah</div>
+						</li>
+					</ul>
+				</div>
 
 				<div id="inspire_btn"><button class="btn">INSPIRE ME!</button></div>
 			</div>
