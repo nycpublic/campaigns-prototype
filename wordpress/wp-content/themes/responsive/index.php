@@ -21,6 +21,12 @@ if ( !defined('ABSPATH')) exit;
 get_header(); ?>
 
 <div id="content" class="grid col-620">
+
+	<?php
+$pods = new Pod('event');
+$pods->findRecords('id DESC', 15);
+echo $pods->showTemplate('event_list');
+?>
         
 	<?php if (have_posts()) : ?>
 
