@@ -8,3 +8,23 @@
  * Version:        0.1.0
  * */
 @import url("../responsive/style.css");
+
+.issue_card {
+	border: 1px solid #666;
+	margin: 3px;
+	padding: 0px;
+	width: 200px;
+	float: left;	
+}
+.issue_card h2 {
+	font-size: 1.2em;
+}
+.issue_card .issue_photo {
+	top: 0;
+	left: 0;
+	width: 200px;
+}
+
+.clear {
+	clear: both;
+}
