@@ -24,11 +24,11 @@ select option_value
 EOQ)
 
 local_mysql <<EOQ
-update wp_options set option_value = replace(option_value, '$LOCAL_WEB', '$REMOTE_WEB')
+update wp_options set option_value = replace(option_value, '$REMOTE_WEB', '$LOCAL_WEB')
 where option_name = 'home'
    or option_name = 'siteurl';
-update wp_posts set guid = replace(guid, '$LOCAL_WEB', '$REMOTE_WEB');
-update wp_posts set post_content = replace(post_content, '$LOCAL_WEB', '$REMOTE_WEB');
+update wp_posts set guid = replace(guid, '$REMOTE_WEB', '$LOCAL_WEB');
+update wp_posts set post_content = replace(post_content, '$REMOTE_WEB', '$LOCAL_WEB');
 EOQ
 
 echo "Loaded production dump into local database on $LOCAL_DB. Site URL transformed to $LOCAL_WEB."
