@@ -17,13 +17,16 @@ get_header(); ?>
 
 <div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
         
-<h2>Popular Campaigns</h2>
+<h2>Find a Campaign</h2>
 <?php
-
+$params = array(
+	'limit' => 25,
+	'orderby' => 'name ASC'
+);
+$campaigns = pods('campaigns', $params);
+echo $campaigns->template('campaign_card');
 ?>
 
-<h2>Ending Soon</h2>
-      
 </div><!-- end of #content -->
 
 <?php get_sidebar(); ?>
