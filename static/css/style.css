@@ -1,0 +1,60 @@
+/** Typography **/
+body {
+	font-family: 'Lato', sans-serif; font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+	font-family: ‘Lato’, sans-serif; font-weight: 100;
+	padding: 0;
+	margin-bottom: 5px;
+}
+
+h1 {
+	font-size:3em;
+}
+h2 {
+	font-size:2em;
+	font-weight:300;
+}
+h3 {
+	font-size:1.5em;
+}
+subtitle {
+	background: #ccc;
+	padding:.3em;
+	margin:.5em 0;
+	display: block;
+	width:50%;
+}
+
+/** Buttons **/
+.btn-join {
+	width: 100%;
+	font-size:2em;
+	padding:.4em;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius:4px;
+	background: #11aac5;
+	color: white;
+	font-weight: 100;
+}
+.btn-join:hover {
+	box-shadow: none;
+	position: relative;
+	top: 1px;
+	left:1px;
+};
+
+
+/** Functional **/
+ul, ol {
+	margin-bottom: 0 0 0 25px !important;
+}
+
+img {
+	//position: absolute;
+	max-width: 100% !important;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
