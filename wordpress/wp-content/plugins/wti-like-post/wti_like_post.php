@@ -157,6 +157,8 @@ function WtiLikePostAdminRegisterSettings() {
      register_setting( 'wti_like_post_options', 'wti_like_post_login_message' );
      register_setting( 'wti_like_post_options', 'wti_like_post_thank_message' );
      register_setting( 'wti_like_post_options', 'wti_like_post_voted_message' );
+	 register_setting( 'wti_like_post_options', 'wti_like_post_allowed_pods' );
+	 register_setting( 'wti_like_post_options', 'wti_like_post_excluded_pods' );
      register_setting( 'wti_like_post_options', 'wti_like_post_allowed_posts' );
      register_setting( 'wti_like_post_options', 'wti_like_post_excluded_posts' );
      register_setting( 'wti_like_post_options', 'wti_like_post_excluded_categories' );
@@ -188,31 +190,6 @@ function WtiLikePostAdminContent() {
 <div class="wrap">
      <h2><?php _e('WTI Like Post Options', 'wti-like-post');?></h2>
      <br class="clear" />
-     
-	<div id="poststuff" class="ui-sortable meta-box-sortables">
-		<div id="WtiLikePostOptions" class="postbox">
-			<h3><?php _e('Donation', 'wti-like-post'); ?></h3>
-			<div class="inside">
-				<p>
-					<?php echo __('There has been a lot of effort put behind the development of this plugin. Please consider donating towards this plugin development.', 'wti-like-post');?>
-					<form method="post" action="https://www.paypal.com/cgi-bin/webscr" target="_blank">
-						<?php _e('Amount', 'wti-like-post'); ?> $ <input type="text" value="" title="Other donate" size="5" name="amount"><br />
-						<input type="hidden" value="_xclick" name="cmd" />
-						<input type="hidden" value="webtechideas@gmail.com" name="business" />
-						<input type="hidden" value="WTI Like Post" name="item_name" />
-						<input type="hidden" value="USD" name="currency_code" />
-						<input type="hidden" value="0" name="no_shipping" />
-						<input type="hidden" value="1" name="no_note" />
-						<input type="hidden" value="3FWGC6LFTMTUG" name="mrb" />
-						<input type="hidden" value="IC_Sample" name="bn" />
-						<input type="hidden" value="http://www.webtechideas.com/thanks/" name="return" />
-						<input type="image" alt="Make payments with payPal - it's fast, free and secure!" name="submit" src="https://www.paypal.com/en_US/i/btn/x-click-but11.gif" />
-					</form>
-				</p>
-			</div>
-		</div>
-	</div>
-	
      <div id="poststuff" class="metabox-holder has-right-sidebar">
 		<div id="WtiLikePostOptions" class="postbox">
 			<h3><?php _e('Configuration', 'wti-like-post'); ?></h3>
@@ -331,6 +308,27 @@ function WtiLikePostAdminContent() {
 									?>
 								</select>
 								<span class="description"><?php _e('Select categories where you do not want to show the like option. It has higher priority than "Exclude post/page IDs" setting.', 'wti-like-post');?></span>
+							</td>
+						</tr>
+						<tr valign="top">
+							<th scope="row"><label><?php _e('Exclude selected pods', 'wti-like-post'); ?></label></th>
+							<td>	
+								<select name='wti_like_post_excluded_pods[]' id='wti_like_post_excluded_pods' multiple="multiple" size="4" style="height:auto !important;">
+									<?php 
+									//global $pods_api;
+									//require_once( plugin_dir_path( __FILE__ ) . 'pods/classes/PodsAPI.php');
+									$all_pods = pods_api()->load_pods();
+									
+									foreach ($all_pods as $pod) {
+										$selected = (in_array($pod->id, $excluded_pods)) ? 'selected="selected"' : '';
+										$option  = '<option value="' . $pod->id . '" ' . $selected . '>';
+										$option .= $pod->name;
+										$option .= '</option>';
+										echo $option;
+									}
+									?>
+								</select>
+								<span class="description"><?php _e('Select pods where you do not want to show the like option.', 'wti-like-post');?></span>
 							</td>
 						</tr>
 						<tr valign="top">
