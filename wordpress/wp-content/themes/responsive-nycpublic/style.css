@@ -9,59 +9,32 @@
  * */
 @import url("../responsive/style.css");
 @import url("issues.css");
+@import url("campaigns.css");
 /* Basics */
 a {
-color: black;
+	color: blue;
 }
 
 .clear {
 	clear: both;
 }
 
+#wrapper {
+	background-color: #efefef;
+}
+
 .card {
 	border-radius: 5px;
+        border: 1px solid #888;
+        margin: 3px;
+        padding: 1em;
+	background: #fefefe;
 }
 .card h2 {
 	font-size: 1.2em;
 }
 
-/* Issues - see import */
-
-/* Campaigns */
-.campaign.card {
-	border: 1px solid #666;
-	margin: 3px;
-	padding: 0px;
-	width: 440px;
-	height: 200px;
-	position: relative;
-	float: left;
-}
-
-.campaign.card .column {
-	height: 100%;
-	float: left;
-}
-
-.campaign.card .column.left {
-	width: 100px;
-}
-
-.campaign.card .column.middle {
-	width: 200px;
-
-}
-
-.campaign.card .column.right{
-	width: 140px;
-}
-
-.campaign.card .photo {
-	height: 100%;
-}
-
 /* Icons */
-
 .icon {
 	background-image: url('../../uploads/2013/06/sprite-02.png');
 	background-repeat: no-repeat;
@@ -88,9 +61,13 @@ color: black;
 }
 
 .icon.black.calendar {
-        background-position: -121px -57px;
+        background-position: -98px -57px;
 }
 
 .icon.black.location {
-        background-position: -138px -57px;
+        background-position: -118px -57px;
+}
+
+.icon.black.tag {
+	background-position: -138px -57px;
 }
