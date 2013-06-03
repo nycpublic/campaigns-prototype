@@ -1,0 +1,17 @@
+.issue.card {
+       //border: 1px solid #666;
+        margin: 3px;
+        padding: 1em;
+        width: 200px;
+        float: left;
+	background: #efefef;
+}
+.issue.card h2 {
+        font-size: 1.2em;
+}
+.issue.card .photo {
+        top: 0;
+        left: 0;
+        width: 200px;
+}
+

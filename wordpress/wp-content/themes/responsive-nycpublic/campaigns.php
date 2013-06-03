@@ -15,7 +15,7 @@ if ( !defined('ABSPATH')) exit;
 
 get_header(); ?>
 
-<div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
+<div id="content" class="grid col-940">
         
 <h2>Find a Campaign</h2>
 <?php

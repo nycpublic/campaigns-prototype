@@ -8,8 +8,12 @@
  * Version:        0.1.0
  * */
 @import url("../responsive/style.css");
-
+@import url("issues.css");
 /* Basics */
+a {
+color: black;
+}
+
 .clear {
 	clear: both;
 }
@@ -21,37 +25,72 @@
 	font-size: 1.2em;
 }
 
-/* Issues */
-
-.issue.card {
-	border: 1px solid #666;
-	margin: 3px;
-	padding: 0px;
-	width: 200px;
-	float: left;	
-}
-.issue.card h2 {
-	font-size: 1.2em;
-}
-.issue.card .photo {
-	top: 0;
-	left: 0;
-	width: 200px;
-}
+/* Issues - see import */
 
 /* Campaigns */
 .campaign.card {
 	border: 1px solid #666;
 	margin: 3px;
 	padding: 0px;
-	width: 600px;
+	width: 440px;
+	height: 200px;
 	position: relative;
+	float: left;
+}
+
+.campaign.card .column {
+	height: 100%;
+	float: left;
+}
+
+.campaign.card .column.left {
+	width: 100px;
+}
+
+.campaign.card .column.middle {
+	width: 200px;
+
+}
+
+.campaign.card .column.right{
+	width: 140px;
 }
 
 .campaign.card .photo {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 200px;
+	height: 100%;
 }
 
+/* Icons */
+
+.icon {
+	background-image: url('../../uploads/2013/06/sprite-02.png');
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	float: left;
+}
+
+.icon.black.person {
+	background-position: -12px -57px;
+}
+
+.icon.black.heart {
+        background-position: -33px -57px;
+}
+
+.icon.black.star {
+        background-position: -56px -57px;
+}
+
+.icon.black.check {
+        background-position: -76px -57px;
+	height: 13px;
+}
+
+.icon.black.calendar {
+        background-position: -121px -57px;
+}
+
+.icon.black.location {
+        background-position: -138px -57px;
+}

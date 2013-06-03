@@ -15,14 +15,13 @@ if ( !defined('ABSPATH')) exit;
 
 get_header(); ?>
 
-<div id="content" class="<?php echo implode( ' ', responsive_get_content_classes() ); ?>">
+<div id="content" class="grid col-940">
         
-<h2>Featured</h2>
+<h2>Featured Issues</h2>
 <?php
 
 ?>
 
-<h2>All Issues</h2>
 <?php
 
 $params = array(
@@ -37,6 +36,13 @@ echo $issues->template('issue_card');
 <div class="clear"></div>
       
 </div><!-- end of #content -->
+
+<script src="masonry.min.js"/>
+<script>
+$('#content').masonry({
+  itemSelector: 'div.issue.card'
+});
+</script>
 
 <?php // get_sidebar(); ?>
 <?php get_footer(); ?>
