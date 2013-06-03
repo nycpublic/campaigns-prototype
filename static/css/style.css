@@ -1,7 +1,37 @@
-/** Typography **/
+
 body {
 	font-family: 'Lato', sans-serif; font-weight: 400;
 }
+
+/** Header **/
+nav {
+	background: #11aac5;
+	height: 60px;
+}
+img.logo {
+	padding:0 .8em;
+	width:160px;
+	display: inline-block;
+}
+ul.nav {
+	display: inline-block;
+}
+ul.nav li {
+	list-style: none;
+	//float: left;
+	//border: 1px solid black;
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	padding:1.4em 2em;
+}
+ul.nav li:hover {
+	background: #1086a1;
+	cursor: pointer;
+	color: white;
+}
+
+/** Typography **/
 
 h1, h2, h3, h4 {
 	font-family: ‘Lato’, sans-serif; font-weight: 100;
@@ -20,11 +50,10 @@ h3 {
 	font-size:1.5em;
 }
 subtitle {
-	background: #ccc;
+	background: #efefef;
 	padding:.3em;
 	margin:.5em 0;
 	display: block;
-	width:50%;
 }
 
 /** Buttons **/
@@ -45,6 +74,29 @@ subtitle {
 	top: 1px;
 	left:1px;
 };
+.btn-start {
+	font-size:2em;
+	padding:.4em;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius:4px;
+	background: #1086a1;
+	color: white;
+	font-weight: 100;
+}
+.btn-login {
+	font-size:1.5em;
+	padding:.4em 1em;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius:4px;
+	background: #1086a1;
+	//color: white;
+	font-weight: 300;
+	text-transform: uppercase;
+	background: white;
+	border: none;
+}
 
 
 /** Functional **/
