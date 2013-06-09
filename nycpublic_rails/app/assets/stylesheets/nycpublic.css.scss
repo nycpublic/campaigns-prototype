@@ -1,6 +1,6 @@
 /* Basics */
 body {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: Arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   background-color: #eee;
@@ -23,3 +23,30 @@ body {
 .navbar .brand, .navbar .nav > li > a {
   text-shadow: none;
 }
+
+/* Campaigns */
+.campaign h1, h2 {
+  font-weight: normal;
+}
+.campaign h1.name {
+  color: black;
+  font-size: 3em;
+}
+
+.campaign h2 {
+  color: #666;
+  font-size: 1.5em;
+}
+
+.campaign.box h2 {
+  background-color: #ddd;
+  padding-left: 1em;
+}
+
+div.campaign.photo {
+  width: 100%;
+  background-color: #ddd;
+  height: 200px;
+  text-align: center;
+}
+
