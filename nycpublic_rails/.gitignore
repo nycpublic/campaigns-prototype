@@ -10,6 +10,9 @@
 # http://github.com/RailsApps/rails-composer/issues
 #----------------------------------------------------------------------------
 
+# database.yml contains sensitive credentials
+config/database.yml
+
 # bundler state
 /.bundle
 /vendor/bundle/
