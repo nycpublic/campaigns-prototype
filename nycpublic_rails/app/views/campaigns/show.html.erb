@@ -1,25 +1,45 @@
-<p id="notice"><%= notice %></p>
+<div class="campaign page row">
+  <div class="campaign frame span12">
+    <div class="campaign inner row">
+      <div class="campaign span9">
+        <h1 class="campaign name"><%= @campaign.name %></h1>
 
-<p>
-  <b>Name:</b>
-  <%= @campaign.name %>
-</p>
+        <div class="campaign dates">
+          <%= @campaign.start_date.to_s(:friendly) %> - <%= @campaign.start_date.to_s(:friendly) %>
+        </div>
 
-<p>
-  <b>Description:</b>
-  <%= @campaign.description %>
-</p>
+        <div class="campaign marquee">
+          <div class="campaign photo">
+            <!-- placeholder for now -->
+            PHOTO PLACEHOLDER
+          </div>
+          <div class="campaign buttons">
+          </div>
+        </div>
 
-<p>
-  <b>Start date:</b>
-  <%= @campaign.start_date %>
-</p>
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <b>End date:</b>
-  <%= @campaign.end_date %>
-</p>
+        <div class="campaign description">
+          <h2>About Us</h2>
+          <%= @campaign.description %>
+        </div>
+        <hr />
+
+      </div>
+      <div class="campaign sidebar span3">
+        <div class="campaign box location">
+          <h2>Location</h2>
+        </div>
+        <div class="campaign box stats">
+          <h2>Stats</h2>
+        </div>
+        <div class="campaign box organizer">
+          <h2>Organizer</h2>
+        </div>
+      </div><!-- end sidebar -->
+    </div>
+  </div>
+</div>
 
 
-<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
-<%= link_to 'Back', campaigns_path %>
+<%= link_to 'Edit', edit_campaign_path(@campaign) %>
