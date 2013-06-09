@@ -1,4 +1,7 @@
 NycpublicRails::Application.routes.draw do
+  resources :campaigns
+
+
   authenticated :user do
     root :to => 'home#index'
   end
